@@ -18,3 +18,12 @@ class Solution:
             ans += (2**count)*rem
             count+=1
         return ans
+
+    
+# A better approach will be as follows
+class Solution:
+    def bitwiseComplement(self, n: int) -> int:
+        ans = 1
+        while n > ans:
+            ans = ans * 2 + 1
+        return ans - n
